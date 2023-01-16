@@ -2,6 +2,8 @@ var Y = "\"Test test test\""; // Assigning a variable
 
 window.alert(Y); // Creating an alert window
 
+// I deleted some code because it was rather silly
+
 var JLA = "The Justice League of America", S = "Superman", B = "Batman", W ="Wonder Woman", G = "Green Lantern", F = "The Flash", A ="Aquaman"; // Staying "On Brand"
 
 document.write(G); // Favorites' First
