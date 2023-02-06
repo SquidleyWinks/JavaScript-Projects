@@ -5,10 +5,10 @@ function countdown() {
         seconds = seconds - 1; // Counts down
         TimeRanges.innerHTML = seconds;
         var time = setTimeout(tick, 1000);
+        timer.innerHTML = seconds;
         if (seconds == -1) {
             alert("Time's up!"); // Alert when time is up
             clearTimeout(time);
-            timer.innerHTML = "";
         }
     }
     tick();
