@@ -1,0 +1,22 @@
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+input[type=text]:hover {
+    box-shadow: 0 0 5px green inset;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+}
