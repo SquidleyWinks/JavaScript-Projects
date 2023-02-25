@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+			</div>
+		<script type="text/javascript">
+			
+            var ajax = new XMLHttpRequest(); // sets the variable ajax as a new XML request
+
+            ajax.open('GET', 'content.html'); // prepares the request, defining the action and the target
+
+            ajax.onreadystatechange = function() { // creates function to take place when the ready state changes
+                if (ajax.readyState == 4) {
+                    document.getElementById('content').innerHTML = ajax.responseText; // sets the HTML to the ajax response
+                }
+            }
+
+            function getContent() { // define's function for button click
+                ajax.send(); // sends ajax request
+                document.getElementById("btn_content").style.display = 'none'; // hides the button
+            }
+            
+
+
+		</script>
+    </body>
+</html>
