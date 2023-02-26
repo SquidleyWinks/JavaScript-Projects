@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!-- Links to the jQuery library-->
+    </head>
+    <script>
+        $(document).ready(function() { // uses jQuery to create the HTML basics
+            $("html").append( 
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#1").click(function() {
+                document.getElementById("1").innerHTML = "Ch-Ch-Ch-Changes"; // alters inner html on click
+            })
+            $("#2").css({"color":"red"}); // uses jQuery to affect css
+            $('#3').click(function() { // hides element on click
+                $('h1').hide();
+            });
+        });
+    </script>
+</html>
