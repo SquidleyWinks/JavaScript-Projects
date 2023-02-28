@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Phil Uebbing</title>
+        <link rel="shortcut icon" type="img/jpg" href="./Images/coding_icon.png">
+        <link rel="stylesheet" type="text/css" href="./CSS/Portfolio_Stylesheet.css">
+    </head>
+
+    <body class="Background">
+
+        <!--NAVBAR-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+        </div>
+        <br>
+        <br>
+
+        <!--BACKGROUND VIDEO-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./Images/Typing.mp4" type="video/mp4">
+                <!--DISPLAY MESSAGE IF VIDEO FAILS-->
+                Your browser does not support HTML5 video :-(
+            </video>
+        </div>
+
+        <!--VIDEO TEXT-->
+        <div class="Video_Text">
+            <h1 class="white-text">Phil Uebbing's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>The word 'Technology' actually means 'writings about technique.' Now, that makes it 
+                        <br>fairly obvious that Language itself is our first Technology. Not only that, it's the one that all of 
+                        <br>the other Technologies are built upon; so it is the fundamental foundation-stone of the whole human experience.
+                    </q>
+                    <br> -Alan Moore, Warlock of Northampton
+                    <br>
+                    <br> My name is Phil Uebbing; welcome to my portfolio website. Let me tell you a bit about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by and enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!--SLIDESHOW-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JavaScript Logos">
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/C_Sharp_and_Dot_NET.png" alt="C# Logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/SQL_and_Database.jpg" alt="SQL Logo">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/Rainbow_Fort.jfif" alt="My Cat">
+                        <div class="text">My cat Leo.</div>
+                    </div>
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--ABOUT-->
+        <div class="Row" id="About">
+            <!--LEFT-->
+            <div class="Column_2">
+                <img src="./Images/Dragon.jfif" alt="Dragon">
+            </div>
+            <!--RIGHT-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a software developer and comics writer. While I'm new to the tech world,
+                    I've been a lifelong storyteller, and seek to bring those instincts to my new profession.
+                    <br>
+                    <br>
+                    While I am currently enrolled in a bootcamp from 
+                    <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>
+                    I graduated from Illinois State University in 2013 with a Bachelor's in English focused 
+                    on Creative Writing. I'm currently learning HTML, CSS, Javascript, SQL, C# and more.
+                    <br>
+                    <br>
+                    One day, I would love to combine my skills by developing a retro-style tactical RPG
+                    with a modern twist. 
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub-->
+        <div class="Row" id="GitHub">
+            <!--LEFT-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/SquidleyWinks" target="_blank">Phil's GitHub</a></p>
+                </p>
+            </div>
+            <!--RIGHT-->
+            <div class="Column_2">
+                <a href="https://github.com/SquidleyWinks" target="_blank"><img src="./Images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--CONTACT-->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                 <form action="https://formspree.io/uebcomic@gmail.com" method="POST" class="form-container">
+                     <h1>Contact</h1>
+                     <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Your name" name="name" required>
+                     <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Your phone number (optional)" name="phone">
+                     <label for="email"><b>Email</b></label>		
+                       <input type="text" placeholder="Your email address" name="email" required>
+                     <label for="message"><b>Message</b></label>
+                       <input type="text" placeholder="Personal message" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
+            </div>
+         </div>
+
+        <!--FOOTER-->
+        <footer>
+            <p>
+                <p>&copy Phil Uebbing</p>
+                <br>
+            </p>
+        </footer>
+        <script src="./JS/Portfolio_JavaScript.js"></script>"
+    </body>
+</html>
