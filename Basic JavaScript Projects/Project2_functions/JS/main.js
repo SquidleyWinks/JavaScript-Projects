@@ -4,3 +4,7 @@ function My_First_Function() {
     str += ing; // Concatenates
     document.getElementById("Test").innerHTML = str; // Displays the string
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('fade-out');
+});
